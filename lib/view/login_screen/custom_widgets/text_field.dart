@@ -5,8 +5,10 @@ class LoginTextFormField extends StatelessWidget {
   final String hintText;
   final Icon prefixIcon;
   final IconButton? suffixIcon;
+  final bool? obscureValue;
 
   const LoginTextFormField({
+this.obscureValue,
     this.suffixIcon,
     required this.hintText,
     required this.prefixIcon,
@@ -16,9 +18,11 @@ class LoginTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      
       decoration: InputDecoration(
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
+        
         hintText: hintText,
         hintStyle: const TextStyle(color: Palette.scaffoldBgColor),
         focusedBorder: const OutlineInputBorder(

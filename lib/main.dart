@@ -1,4 +1,3 @@
-import 'package:festa_login_and_home_page/view/constants/colors.dart';
 import 'package:festa_login_and_home_page/view/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -20,10 +19,9 @@ class _MyAppState extends State<MyApp> {
     return  MaterialApp(
       
       theme: ThemeData().copyWith(
-useMaterial3: true,
-        scaffoldBackgroundColor: Palette.scaffoldBgColor
+useMaterial3: false,
       ),
-      home:const  LoginPage(),
+      home:const LoginPage(),
     );
   }
 }
