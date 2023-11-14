@@ -17,24 +17,27 @@ class _DetailsCardState extends State<DetailsCard> {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(border: Border.all()),
-        height: 300,
+        height: height*0.5,
         child: Stack(
           children: [
             const Positioned(child: SizedBox()),
             Positioned(
-                child: Container(
-              color: Palette.scaffoldBgColor,
-              height: height * 0.1,
-            )),
+              child: Container(
+                color: Palette.scaffoldBgColor,
+                height: height * 0.1,
+              ),
+            ),
             Positioned(
-                top: height * 0.033,
-                left: 0,
-                right: 0,
-                child: Center(
-                    child: CircleAvatar(
+              top: height * 0.033,
+              left: 0,
+              right: 0,
+              child: Center(
+                child: CircleAvatar(
                   backgroundColor: Palette.scaffoldBgColor,
                   radius: width * 0.13,
-                ))),
+                ),
+              ),
+            ),
             Positioned(
               top: height * 0.039,
               left: 0,
@@ -49,18 +52,23 @@ class _DetailsCardState extends State<DetailsCard> {
               ),
             ),
             Positioned(
-              top: height * 0.17,
+              top: height * 0.20,
               left: 0,
               right: 0,
-              child: const Center(
-                child: Text(
-                  'Hi, My Name Is ',
-                  style: TextStyle(fontSize: 17, color: Colors.grey),
+              child: Center(
+                child: GestureDetector(
+                  onTap: () {
+                   
+                  },
+                  child: const Text(
+                    'Hi, My Name Is ',
+                    style: TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
                 ),
               ),
             ),
             Positioned(
-              top: height * 0.20,
+              top: height * 0.24,
               left: 0,
               right: 0,
               child: const Center(

@@ -1,5 +1,5 @@
 import 'package:festa_login_and_home_page/view/constants/colors.dart';
-import 'package:festa_login_and_home_page/view/home_screen/detail_card_web.dart';
+import 'package:festa_login_and_home_page/view/home_screen/widgets/detail_card_web.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreenWebView extends StatefulWidget {
@@ -26,49 +26,49 @@ class _HomeScreenWebViewState extends State<HomeScreenWebView> {
                 SizedBox(
                   height: height * 0.10,
                 ),
-                const CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/david.jpeg'),
-                  radius: 100,
+                 CircleAvatar(
+                  backgroundImage:const  AssetImage('assets/images/david.jpeg'),
+                  radius:width*0.08,
                 ),
                 SizedBox(
                   height: height * 0.07,
                 ),
-                const Text(
+                 Text(
                   'Sarah White',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 30,
+                      fontSize: width*0.03,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 4),
                 ),
                 SizedBox(
                   height: height * 0.07,
                 ),
-                const Text(
+                 Text(
                   'email   : sarahwhite@festahub.com',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: TextStyle(color: Colors.white, fontSize: width*0.018),
                 ),
                 SizedBox(
                   height: height * 0.03,
                 ),
-                const Text(
+                 Text(
                   'phone   : (763-487-8585)',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: TextStyle(color: Colors.white, fontSize: width*0.012),
                 ),
                 SizedBox(
                   height: height * 0.15,
                 ),
                 Container(
-                  height: 60,
-                  width: 190,
+                  height: height*0.05,
+                  width: width*0.20,
                   decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(24)),
+                      borderRadius: BorderRadius.all(Radius.circular(24),),
                       color: Colors.white),
-                  child: const Center(
+                  child:  Center(
                     child: Text(
                       'LOG OUT',
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: width*0.02,
                           color: Palette.scaffoldBgColor,
                           fontWeight: FontWeight.bold),
                     ),
@@ -102,9 +102,9 @@ class _HomeScreenWebViewState extends State<HomeScreenWebView> {
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
-                            crossAxisSpacing: 50,
+                            crossAxisSpacing: 5,
                             childAspectRatio: 1),
-                    itemCount: 30,
+                    itemCount: 5,
                     itemBuilder: (context, index) {
                       return const DetailCardWeb();
                     },
