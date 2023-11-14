@@ -21,8 +21,8 @@ class _DetailCardWebState extends State<DetailCardWeb> {
           RandomModel data = snapshot.data;
 
           String name = data.results.first.name.first;
-          String email = data.results.first.email;
-          String phone = data.results.first.phone;
+          // String email = data.results.first.email;
+          // String phone = data.results.first.phone;
           String imageUrl = data.results.first.picture.large;
 
 
@@ -32,7 +32,7 @@ class _DetailCardWebState extends State<DetailCardWeb> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Container(
-              decoration: BoxDecoration(border: Border.all()),
+              decoration: BoxDecoration(border: Border.all(),),
               height: 300,
               width: 500,
               child: Stack(

@@ -18,7 +18,7 @@ class _HomeScreeMobileViewState extends State<HomeScreeMobileView> {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(DataController());
-    
+
     final height = MediaQuery.sizeOf(context).height;
     final width = MediaQuery.sizeOf(context).width;
 
@@ -28,13 +28,14 @@ class _HomeScreeMobileViewState extends State<HomeScreeMobileView> {
         leading: Builder(
           builder: (context) {
             return IconButton(
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-                icon: const Icon(
-                  Icons.move_up_rounded,
-                  color: Colors.white,
-                ));
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              icon: const Icon(
+                Icons.move_up_rounded,
+                color: Colors.white,
+              ),
+            );
           },
         ),
         actions: [
@@ -60,14 +61,11 @@ class _HomeScreeMobileViewState extends State<HomeScreeMobileView> {
       body: FutureBuilder(
         future: controller.randomData,
         builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
-
-
           RandomModel data = snapshot.data;
-          
 
-          int count =  data.results.length;
+          int count = data.results.length;
           return ListView.builder(
-            itemCount:count,
+            itemCount: count,
             itemBuilder: (context, index) {
               return const DetailsCard();
             },

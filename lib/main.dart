@@ -1,5 +1,4 @@
-
-import 'package:festa_login_and_home_page/view/home_screen/home_screen.dart';
+import 'package:festa_login_and_home_page/view/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +19,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData().copyWith(
         useMaterial3: false,
       ),
-      home: const HomeScreen(),
+      home: const LoginPage(),
     );
   }
 }

@@ -20,22 +20,14 @@ class _DetailsCardState extends State<DetailsCard> {
     return FutureBuilder(
       future: controller.randomData,
       builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
+        RandomModel data = snapshot.data;
 
-          RandomModel data = snapshot.data;
+        String name = data.results.first.name.first;
+        // String email = data.results.first.email;
+        // String phone = data.results.first.phone;
+        String imageUrl = data.results.first.picture.large;
 
-          String name = data.results.first.name.first;
-          String email = data.results.first.email;
-          String phone = data.results.first.phone;
-          String imageUrl = data.results.first.picture.large;
-
-
-         
-        return
-        
-        
-        
-         Padding(
-
+        return Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
             decoration: BoxDecoration(border: Border.all()),
@@ -66,7 +58,7 @@ class _DetailsCardState extends State<DetailsCard> {
                   right: 0,
                   child: Center(
                     child: CircleAvatar(
-                      backgroundImage:NetworkImage(imageUrl),
+                      backgroundImage: NetworkImage(imageUrl),
                       radius: width * 0.12,
                     ),
                   ),
@@ -89,10 +81,10 @@ class _DetailsCardState extends State<DetailsCard> {
                   top: height * 0.24,
                   left: 0,
                   right: 0,
-                  child:  Center(
+                  child: Center(
                     child: Text(
                       name,
-                      style:const  TextStyle(
+                      style: const TextStyle(
                           fontSize: 19,
                           fontWeight: FontWeight.w600,
                           color: Palette.scaffoldBgColor),
